@@ -6,7 +6,16 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddfriendComponent } from './addfriend/addfriend.component';
 import { ViewfriendComponent } from './viewfriend/viewfriend.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const link:Routes=[
+  {
+    path:"",component:AddfriendComponent
+  },
+  {
+    path:"",component:ViewfriendComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +25,8 @@ import { ViewfriendComponent } from './viewfriend/viewfriend.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(link)
   ],
   providers: [],
   bootstrap: [AppComponent]
