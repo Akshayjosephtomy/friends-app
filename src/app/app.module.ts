@@ -8,6 +8,7 @@ import { AddfriendComponent } from './addfriend/addfriend.component';
 import { ViewfriendComponent } from './viewfriend/viewfriend.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const link:Routes=[
   {
@@ -28,7 +29,8 @@ const link:Routes=[
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(link),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
